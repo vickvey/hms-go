@@ -1,2 +1,11 @@
-# hms-go
-This Project is a basic hotel management system project written in go. This is a CLI based project which offers smooth user experience on terminal.
+```c
+#include <stdio.h>
+
+struct Booking {
+    int ID;
+    const char Name[40];
+    int Age;
+    const char AadharNumber[17];
+    struct Room Room;
+};
+```
