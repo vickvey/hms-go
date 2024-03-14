@@ -212,7 +212,8 @@ func (app *HotelApp) MakeBooking() {
 	if err != nil {
 		panic(err)
 	}
-	if age <= 0 || age >= 150 {
+	if age < 0 || age >= 150 {
+		fmt.Println("Age cannot be less than 0 or more than 150 years.")
 		panic("Invalid age")
 	}
 	booking.Age = age
@@ -306,14 +307,66 @@ func (app *HotelApp) ShowBookingStatus() {
 
 // / TODO: complete this
 func (app *HotelApp) CancelBooking() {
+	reader := bufio.NewReader(os.Stdin)
+
+	// Implement the logic for showing status of a booking
 	fmt.Println("You selected to cancel a booking.")
-	// Implement the logic for canceling a booking
+	app.PressEnterToContinue()
+
+	fmt.Println("Booking Cancellation Page")
+	fmt.Println("---------------------------------------")
+	fmt.Printf("Enter your room number: ")
+	rn_str, err := reader.ReadString('\n')
+	if err != nil {
+		panic(err)
+	}
+	rn, err := strconv.Atoi(strings.TrimSpace(rn_str))
+	if err != nil {
+		panic(err)
+	}
+
+	for _, booking := range app.BookingData {
+		if booking.RoomNumber == rn && app.Rooms[rn] {
+			// room number is found
+			delete(app.BookingData, booking.ID)
+
+			fmt.Println("Booking cancelled successfully.")
+			app.PressEnterToContinue()
+			return
+		}
+	}
+	fmt.Println("Booking not found!!")
+	app.PressEnterToContinue()
 }
 
 // / TODO: complete this
 func (app *HotelApp) ShowAllBookings() {
-	fmt.Println("You selected to show all bookings.")
 	// Implement the logic for showing all bookings
+	fmt.Println("You selected to show all bookings.")
+	app.PressEnterToContinue()
+
+	fmt.Println("Booking List Page")
+	fmt.Println("-----------------------------------------------")
+
+	if len(app.BookingData) == 0 {
+		fmt.Println("No Booking data to show!!")
+		return
+	}
+
+	for _, booking := range app.BookingData {
+		fmt.Println("-----------------------------------------------")
+		fmt.Println("Room number: ", booking.RoomNumber)
+		fmt.Println("Name of guest: ", booking.Name)
+		fmt.Println("Aadhar number of guest: ", booking.AadharNumber)
+		if booking.RoomType == AC {
+			fmt.Println("Room Type: AC")
+		} else {
+			fmt.Println("Room Type: NON-AC")
+		}
+		fmt.Println("Booking amount paid: Rs ", booking.AmountPaid)
+	}
+	fmt.Println("-----------------------------------------------")
+	app.PressEnterToContinue()
 }
 
 func main() {

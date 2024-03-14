@@ -91,28 +91,17 @@ Press Enter to continue...
 ### A-4
 
 ```
-Here are the list of all bookings:
+Booking List Page:
 -----------------------------------------------
-
-*******************************
-Non-AC rooms:
--------------------------------
 Room number: _
 Name of guest: _
 Aadhar number of guest: _
--------------------------------
+Booking amount paid: Rs _
+-----------------------------------------------
 Room number: _
 Name of guest: _
 Aadhar number of guest: _
--------------------------------
-
-*******************************
-AC rooms:
--------------------------------
-Room number: _
-Name of guest: _
-Aadhar number of guest: _
--------------------------------
-
+Booking amount paid: Rs _
+-----------------------------------------------
 Press Enter to continue...
 ```
