@@ -30,7 +30,7 @@ You should run the command `chmod +x hms-go-linux-amd64.exe` for linux or `chmod
 - Example for macos:
   ```bash
   ➜  build git:(main) chmod +x hms-go-macos-amd64 
-➜  build git:(main) ./hms-go-macos-amd64   
+  ➜  build git:(main) ./hms-go-macos-amd64   
   ```
 
 ## Build And Run ( For devs )
