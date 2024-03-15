@@ -21,6 +21,7 @@
   - Download the `hms-go-windows-amd64.exe` file from the release section.
   - After downloading, open and run the executable file.
   - It will ask you that it could harm your computer, Ignore the warning as it is general security check for all outside applications.
+  - Go to `more info` option and select `run anyway`.
   - Enjoy the app!
 
 - NOTE FOR LINUX AND MAC USERS
