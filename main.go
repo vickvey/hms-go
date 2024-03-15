@@ -383,8 +383,9 @@ func main() {
 func (app *HotelApp) clearTerminal() {
 	// Check the operating system
 	if runtime.GOOS == "windows" {
-		// For Windows, use the "cls" command
-		_ = exec.Command("cmd", "/c", "cls").Run()
+		cmd := exec.Command("cmd", "/c", "cls")
+		cmd.Stdout = os.Stdout
+		cmd.Run()
 	} else {
 		// For Unix-like systems, use ANSI escape codes
 		fmt.Print("\033[H\033[2J")
