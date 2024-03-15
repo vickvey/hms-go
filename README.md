@@ -15,7 +15,7 @@
 - Go programming language installed on your system.
 - GNU Make (GNU Make is usually installed by default on most Linux distributions.)
 
-## For Simple Use 
+## For Simple Use ( For normal users )
 - Just download the release for your particular operating system.
 - Example for windows:
   - Download the `hms-go-windows-amd64.exe` file from the release section.
@@ -23,7 +23,7 @@
   - It will ask you that it could harm your computer, Ignore the warning as it is general security check for all outside applications.
   - Enjoy the app!
 
-## Installation
+## Build And Run ( For devs )
 
 To install and run the application, follow these steps:
 
@@ -44,6 +44,14 @@ cd hms-go
 ```bash
 make
 ```
+4. Go to bulid folder and run the required build for your operating system.
+  Example: For linux run  :
+  ```bash
+  ➜  build git:(main) ✗ ./hms-go-linux-amd64 
+Hotel Management System CLI App
+Copyright@2024 vickvey
+Press Enter to continue...
+  ```
 
 ## Usage
 
