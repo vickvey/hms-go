@@ -16,7 +16,7 @@
 - GNU Make (GNU Make is usually installed by default on most Linux distributions.)
 
 ## For Simple Use ( For normal users )
-- Just download the release for your particular operating system.
+- Just download the [release](https://github.com/vickvey/hms-go/releases/tag/v1.0.0) for your particular operating system.
 - Example for windows:
   - Download the `hms-go-windows-amd64.exe` file from the release section.
   - After downloading, open and run the executable file.
