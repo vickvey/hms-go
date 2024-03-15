@@ -23,6 +23,9 @@
   - It will ask you that it could harm your computer, Ignore the warning as it is general security check for all outside applications.
   - Enjoy the app!
 
+- NOTE FOR LINUX AND MAC USERS
+  You should run the command `chmod +x hms-go-linux-amd64.exe` in your terminal before running the executable to grant permission for run. 
+
 ## Build And Run ( For devs )
 
 To install and run the application, follow these steps:
