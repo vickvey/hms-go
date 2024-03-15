@@ -25,7 +25,7 @@
 
 - NOTE FOR LINUX AND MAC USERS
 
-You should run the command `chmod +x hms-go-linux-amd64.exe` for linux or `chmod +x hms-go-macos-amd64.exe` for mac in your terminal before running the executable to grant permission for run. 
+  You should run the command `chmod +x hms-go-linux-amd64.exe` for linux or `chmod +x hms-go-macos-amd64.exe` for mac in your terminal before running the   executable to grant permission for run. 
 
 - Example for macos:
   ```bash
