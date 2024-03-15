@@ -15,6 +15,9 @@
 - Go programming language installed on your system.
 - GNU Make (GNU Make is usually installed by default on most Linux distributions.)
 
+## For Simple Use 
+- Just download the release for your particular operating system.
+
 ## Installation
 
 To install and run the application, follow these steps:
