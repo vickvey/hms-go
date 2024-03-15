@@ -28,23 +28,3 @@ type HotelApp struct {
 	BookedAC    int
 	BookedNonAC int
 }
-
-func (app *HotelApp) InitializeRooms() {
-	for i := FIRST_AC_ROOM; i <= LAST_AC_ROOM; i++ {
-		app.Rooms[i] = false
-	}
-	for i := FIRST_NON_AC_ROOM; i <= LAST_NON_AC_ROOM; i++ {
-		app.Rooms[i] = false
-	}
-}
-
-func NewHotelApp() *HotelApp {
-	// Initialize HotelApp with an empty map for BookingData and RoomsData
-	return &HotelApp{
-		Menu:        []MenuItem{},
-		BookingData: make(map[UniqueBookingID]Booking),
-		Rooms:       make(map[int]bool),
-		BookedAC:    0,
-		BookedNonAC: 0,
-	}
-}
